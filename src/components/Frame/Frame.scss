@@ -1,0 +1,62 @@
+@import "../../utilities/variables.scss";
+
+.Frame-Container {
+  position: absolute;
+  pointer-events: none;
+  z-index: 500;
+
+  .Frame {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+
+    --Frame-Width: 20px;
+
+    .Frame-Component {
+    }
+
+    > :nth-child(1) {
+      display: none;
+    }
+
+    > :nth-child(2) {
+      transform: rotate(180deg);
+      align-self: flex-end;
+      display: none;
+    }
+
+    > :nth-child(3) {
+      display: none;
+    }
+
+    > :nth-child(4) {
+      right: 0%;
+      transform: translate(0px, 0px) scale(-1);
+      display: none;
+    }
+
+    svg path {
+      transition: all 500ms;
+    }
+
+    .Top-Down-Frame {
+      position: absolute;
+      min-height: var(--Frame-Width);
+      height: 1vh;
+    }
+
+    .Left-Right-Frame {
+      position: absolute;
+      min-width: var(--Frame-Width);
+      width: 1vh;
+    }
+
+    .Left-Corner {
+      position: absolute;
+      transform: scale(-1);
+      left: -0px;
+      height: 60px;
+    }
+  }
+}

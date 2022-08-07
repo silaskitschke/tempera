@@ -1,0 +1,171 @@
+@import "/src/utilities/variables.scss";
+@import "/src/utilities/fonts.scss";
+
+// fonts
+
+body {
+  margin: 0;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, rgb(245, 245, 245) 0%, rgb(255, 255, 255) 50%, rgb(245, 245, 245) 100%);
+  background-size: 100% 100%;
+  font-family: "Montserrat", sans-serif;
+
+  @media (max-width: $xxl) {
+    font-size: 80%;
+  }
+
+  @media (max-width: $xl) {
+    font-size: 70%;
+  }
+
+  @media (max-width: $lg) {
+    font-size: 70%;
+  }
+
+  @media (max-width: $md) {
+    font-size: 70%;
+  }
+
+  @media (max-width: $sm) {
+  }
+
+  @media (max-width: $xs) {
+  }
+}
+
+.Logo {
+  @keyframes rotate {
+    0% {
+      -webkit-filter: hue-rotate(0deg);
+    }
+    100% {
+      -webkit-filter: hue-rotate(360deg);
+    }
+  }
+
+  animation-iteration-count: infinite;
+  animation-name: rotate;
+  animation-duration: 5s;
+}
+
+// Breakpoints
+
+html {
+}
+
+#root {
+}
+
+.Return-Nav {
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+  display: flex;
+  width: fit-content;
+  color: black;
+
+  svg {
+    height: 20px;
+  }
+
+  div {
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-weight: bold;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+ul,
+ul li,
+ul ul li {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 4em;
+
+  @media (max-width: $xl) {
+    font-size: 4em;
+  }
+
+  @media (max-width: $md) {
+    font-size: 4em;
+  }
+}
+
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.25em;
+}
+h5 {
+  font-size: 1.2em;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+p {
+  margin: 0;
+  font-size: 1.25em;
+  line-height: 1.5;
+  padding: 10px 0px 0px 0px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none; /* no underline */
+}
+
+hr {
+  border-style: none;
+  height: 1px;
+  background-color: black;
+  width: 100%;
+}
+
+.pd-lr {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.pd-tb {
+  padding: 50px 0%;
+}
+
+.pd-top-50 {
+  padding-top: 50px;
+}
+
+.pd-top-25 {
+  padding-top: 25px;
+}

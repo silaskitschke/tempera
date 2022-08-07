@@ -1,0 +1,182 @@
+@import "../../utilities/variables.scss";
+
+.Container {
+  flex-direction: column;
+  display: flex;
+  text-align: left;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.Painting-Page {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.Painting-Page-Separator {
+  width: 100%;
+  height: 20px;
+  transform: scale(-1) translateY(-5px);
+  display: none;
+}
+
+.Painting-Page-Header {
+  margin-top: 10vh;
+  margin-bottom: 20px;
+  text-align: left;
+
+  h1 {
+    font-size: 5vw;
+    background: -webkit-linear-gradient(rgb(127, 20, 133), rgb(82, 41, 170));
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: black;
+    width: fit-content;
+
+    @media (max-width: $xl) {
+      font-size: 5vw;
+    }
+
+    @media (max-width: $md) {
+      font-size: 3em;
+    }
+  }
+
+  h3 {
+    font-size: 3em;
+    font-weight: normal;
+
+    @media (max-width: $md) {
+      font-size: 1.5em;
+    }
+  }
+}
+
+.Painting-Page-Content-Wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+
+  footer {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10em;
+    opacity: 0.3;
+  }
+}
+
+.Painting-Page-Content {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  .Painting-Page-Info {
+    flex-direction: column;
+    display: flex;
+    gap: 40px;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    @media (max-width: $md) {
+      gap: 40px;
+      flex-direction: row;
+    }
+
+    li > :nth-child(2) {
+      margin-top: 10px;
+      text-transform: none;
+      font-weight: normal;
+    }
+
+    h3 {
+      font-size: 1.25em;
+    }
+  }
+
+  .Painting-Page-Image {
+    padding: 5em;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @media (max-width: $lg) {
+      padding: 3em;
+    }
+
+    .Painting-Page-Image-Background {
+      border-radius: 0px;
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      background-color: rgb(240, 240, 240);
+
+      @media (max-width: $lg) {
+        border-radius: 0px;
+      }
+    }
+
+    img {
+      max-height: 550px;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .Painting-Page-Text {
+    gap: 7em;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+
+    p {
+      white-space: pre-line;
+      padding: 0;
+    }
+
+    @media (max-width: $md) {
+      flex-direction: column-reverse;
+      gap: 2em;
+    }
+
+    .Return-Nav {
+    }
+
+    .Painting-Page-Nav {
+      font-weight: bold;
+    }
+  }
+
+  p {
+    max-width: 700px;
+    text-align: left;
+  }
+}
+
+.Painting-Page-Footer {
+  height: 50px;
+  width: 100%;
+  background-color: coral;
+}
+
+/* .Painting-Page-Background {
+  position: absolute;
+  top: 30%;
+  height: 70%;
+  width: 100%;
+  z-index: -10;
+} */

@@ -1,0 +1,40 @@
+{
+  "paintings": [
+    {
+      "id": 1562,
+      "name": "Komposition VII",
+      "year": 1923,
+      "artist": "Wassily Kandinsky",
+      "style": "Abstrakt",
+      "url": "https://tempera.info/img/kanagawa.jpg",
+      "color": "#ecbd46",
+      "color2": "#942819",
+      "teaser": "Ein unvergessenes Gemälde von Wassily Kandinsky welches die abstrakte Malerei nachhaltig geprägt hat.",
+      "text": "Die Komposition 8 gehört zu den wichtigsten Werken Kandinskys. Es gilt als eines der ersten Werke von Kandinsky, welches der abstrakten Malerei zugeordnet werden kann. Kandinsky wurde beim Erstellen des Gemäldes stark von dem russischen Maler Alexander Michailowitsch Rodtschenko geprägt, der für die Verwendung von Lineal und Zirkel für das Erstellen geometrischer Figuren bekannt ist. Das Gemälde vereint unterschiedliche geometrische Figuren und stellt sie in einem transzendenten Einklang dar."
+    },
+    {
+      "id": 8212,
+      "name": "Schlafzimmer in Arles",
+      "year": 1888,
+      "artist": "Vincent van Gogh",
+      "style": "Impressionismus",
+      "url": "https://tempera.info/img/schlafzimmerarles.jpg",
+      "color": "#49649a",
+      "color2": "#7593aa",
+      "teaser": "Vincent van Goghs berühmtes Gemälde bietet einen Blick in sein Schlafzimmer in Arles.",
+      "text": "Das Schlafzimmer in Arles ist eines der bekanntesten Werke von Vincent van Gogh. Es zeigt das namensgebende Schlafzimmer in Arles, einer Stadt in Südfrankreich. Das Gemälde weist die typischen Farben von Vincent van Gogh auf, welche mit schwarzen Trennstrichen Objekte voneinander trennen. Die oben gezeigte Variante dieses Gemälde ist die 3. Version, wobei die erste Version nur eine Skizze war. Die zweite Version weist hingegen nur wenige Unterschiede auf. Die verzerrten Fluchtpunkte sind darauf zurückzuführen, dass teilweise die Wohnungen in Arles tatsächlich nicht rechtwinklige Ecken hatten. Über dem Bett von Van Gogh hingen die Selbstportraits von Eugène Boch und Paul-Eugène Milliet."
+    },
+    {
+      "id": 7612,
+      "name": "Die große Welle vor Kanagawa",
+      "year": 1830,
+      "artist": "Katsushika Hokusai",
+      "style": "Ukiyo-e",
+      "url": "https://tempera.info/img/komposition8.jpg",
+      "color": "#b99767",
+      "color2": "#ceae84",
+      "teaser": "Die große Welle vor Kanagawa ist das erste Bild von Katsushika Hokusais bekannter Bildserie \"36 Ansichten des Berges Fuji\".",
+      "text": "Das Gemälde entstand im Rahmen der Bildreihe \"36 Ansichten des Berges Fuji\". Es ist das erste Bild der Reihe. Durch die Technik des Farbholzschnitts wurde diese Bildreihe auch vervielfältigt, es wird geschätzt das ca. 6000 Abzüge existieren. Wie der Titel schon verrät, zeigen alle Bilder der Reihe den Berg Fuji aus unterschiedlichen Perspektiven. Die große Welle vor Kanagawa zeigt das Meer an der Küste von Kanagawa. Der Fokus liegt auf einer großen Welle, die das Meer toben lässt und Boote mit sich reißt. Das Bild veranschaulicht die Kräfte der Naturgewalten. Diese Veranschaulichung wird perspektivisch dadurch unterstützt, dass der Berg Fuji, der größte Berg Japans, kleiner erscheint als die Welle."
+    }
+  ]
+}

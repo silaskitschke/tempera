@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.11c949a2.css",
+    "main.js": "/static/js/main.d09f7b4f.js",
+    "static/js/787.b3d79b74.chunk.js": "/static/js/787.b3d79b74.chunk.js",
+    "static/media/schrei.jpg": "/static/media/schrei.0d0d85fc561c4e0e033a.jpg",
+    "static/media/adam.jpg": "/static/media/adam.ac5b86712168b096e53e.jpg",
+    "static/media/night.jpg": "/static/media/night.a616b27ffc69613c3d96.jpg",
+    "static/media/bg.png": "/static/media/bg.27ca183196437034ceb1.png",
+    "static/media/mona.jpg": "/static/media/mona.1a1225510ab7209eb449.jpg",
+    "static/media/logo_tempera.png": "/static/media/logo_tempera.919bb419f0db86de74d7.png",
+    "static/media/logo.svg": "/static/media/logo.3b526eafbb913b188b0b2202ca267a60.svg",
+    "index.html": "/index.html",
+    "main.11c949a2.css.map": "/static/css/main.11c949a2.css.map",
+    "main.d09f7b4f.js.map": "/static/js/main.d09f7b4f.js.map",
+    "787.b3d79b74.chunk.js.map": "/static/js/787.b3d79b74.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.11c949a2.css",
+    "static/js/main.d09f7b4f.js"
+  ]
+}

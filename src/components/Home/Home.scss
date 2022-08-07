@@ -1,0 +1,223 @@
+@import "../../utilities/variables.scss";
+
+.Home {
+  box-sizing: border-box;
+  justify-content: space-between;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.Home-Background {
+  display: none;
+  -webkit-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.Home-Logo {
+  height: 15px;
+  opacity: 0.25;
+
+  svg path {
+    fill: black !important;
+    transition: all 2s;
+  }
+}
+
+.Home-Content-Container {
+  padding-top: 5vh;
+  border-width: 0px 0px 0px 0px;
+  border-style: solid;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Header-Background {
+  display: none;
+  position: absolute;
+  font-size: 20rem;
+  white-space: nowrap;
+  opacity: 0.05;
+  -webkit-filter: blur(7px);
+  pointer-events: none;
+}
+
+.Painting-Button {
+  margin-top: 1.75em;
+  position: relative;
+
+  a {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    transition: transform 250ms;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 1.25em;
+  }
+
+  svg {
+    transform: rotate(180deg);
+    height: 30px;
+  }
+}
+
+.Bottom-Bar {
+  padding-bottom: 30px;
+  margin-top: 50px;
+  opacity: 0.3;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+
+  .Bottom-Bar-Links {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.Home-Title {
+  margin-top: 10px;
+
+  position: relative;
+
+  p {
+    white-space: wrap;
+    max-width: 600px;
+  }
+
+  h1 {
+    font-size: 4vw;
+    background: -webkit-linear-gradient(rgb(127, 20, 133), rgb(82, 41, 170));
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: black;
+    width: fit-content;
+    max-width: 1200px;
+    white-space: pre-wrap;
+
+    @media screen and (max-width: $lg) {
+      font-size: 3em;
+      max-width: 800px;
+    }
+  }
+}
+
+.Home-Swiper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.swiper {
+  margin: 0;
+  overflow: visible;
+}
+
+.swiper-wrapper {
+}
+
+.swiper-slide {
+  overflow: hidden;
+  max-width: 80vw;
+  position: relative;
+  min-width: 1px;
+  width: auto;
+  height: 40vh;
+  opacity: 0.15;
+  position: relative;
+  transition: opacity 1s;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .border {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  @media (max-width: $md) {
+  }
+}
+
+.swiper-slide-active,
+.swiper-slide-duplicate-active {
+  opacity: 1;
+
+  .border {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border: 0px white solid;
+    position: absolute;
+  }
+}
+
+.swiper-navigation {
+}
+
+.swiper-button-next {
+  right: 25px;
+}
+
+.swiper-button-prev {
+  left: 25px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  background: url("../../img/arrow.png") no-repeat;
+  opacity: 0.5;
+  background-size: 100% 100%;
+  color: rgb(109, 109, 109);
+
+  &:after {
+    display: none;
+    content: "";
+  }
+}
+
+.swiper-button-prev {
+  transform: rotate(90deg);
+}
+
+.swiper-button-next {
+  transform: rotate(-90deg);
+}
+
+.custom-pagination {
+  margin-top: 20px;
+  bottom: 0px !important;
+  position: relative;
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: rgb(134, 134, 134);
+  }
+}
