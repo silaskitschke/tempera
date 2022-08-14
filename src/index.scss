@@ -9,8 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  background: linear-gradient(135deg, rgb(245, 245, 245) 0%, rgb(255, 255, 255) 50%, rgb(245, 245, 245) 100%);
-  background-size: 100% 100%;
+  background-color: white;
   font-family: "Montserrat", sans-serif;
 
   @media (max-width: $xxl) {
@@ -57,6 +56,10 @@ html {
 }
 
 #root {
+}
+
+.page-wrapper {
+  min-height: 100vh;
 }
 
 .Return-Nav {
@@ -106,7 +109,7 @@ ul ul li {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 6em;
 
   @media (max-width: $xl) {
     font-size: 4em;
@@ -136,9 +139,13 @@ h5 {
 
 p {
   margin: 0;
-  font-size: 1.25em;
+  font-size: 1.5em;
   line-height: 1.5;
   padding: 10px 0px 0px 0px;
+
+  @media (max-width: $md) {
+    font-size: 1.25em;
+  }
 }
 
 a {
@@ -168,4 +175,11 @@ hr {
 
 .pd-top-25 {
   padding-top: 25px;
+}
+
+.Back-Button {
+  width: fit-content;
+  text-decoration: underline;
+  margin-bottom: 10vh;
+  margin-top: 2.5vh;
 }

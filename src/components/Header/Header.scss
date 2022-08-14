@@ -1,0 +1,59 @@
+@import "../../utilities/variables.scss";
+
+.Header {
+  @media (max-width: $lg) {
+    margin-bottom: 2vh;
+  }
+
+  .Nav-Links {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    font-size: 1rem;
+    margin-top: 1vh;
+    white-space: nowrap;
+
+    @media (max-width: $lg) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      font-size: 1.5em;
+    }
+  }
+
+  .Link-Collection {
+    @media (max-width: $lg) {
+      margin-top: 2vh;
+    }
+  }
+
+  .Marquee-Header {
+    background-color: black;
+    color: white;
+  }
+
+  .Nav-Bar {
+    margin-top: 5vh;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $lg) {
+      flex-direction: column;
+    }
+
+    a {
+      position: sticky;
+      top: 0;
+
+      svg {
+        height: 50px;
+        max-width: 50vw;
+      }
+    }
+
+    svg path {
+      fill: black !important;
+      transition: all 2s;
+    }
+  }
+}

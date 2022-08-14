@@ -20,24 +20,16 @@
   position: absolute;
 }
 
-.Home-Logo {
-  height: 15px;
-  opacity: 0.25;
-
-  svg path {
-    fill: black !important;
-    transition: all 2s;
-  }
-}
-
 .Home-Content-Container {
-  padding-top: 5vh;
   border-width: 0px 0px 0px 0px;
   border-style: solid;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: $lg) {
+  }
 }
 
 .Header-Background {
@@ -97,15 +89,11 @@
 
   p {
     white-space: wrap;
-    max-width: 600px;
   }
 
   h1 {
     font-size: 4vw;
-    background: -webkit-linear-gradient(rgb(127, 20, 133), rgb(82, 41, 170));
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    color: black;
+
     width: fit-content;
     max-width: 1200px;
     white-space: pre-wrap;
@@ -118,6 +106,7 @@
 }
 
 .Home-Swiper {
+  margin-top: 5vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -131,37 +120,82 @@
 .swiper-wrapper {
 }
 
+.Swiper-Content {
+  box-sizing: border-box;
+  padding: 20px 35px 20px 35px;
+  display: flex;
+  transition: opacity 1s, transform 1s;
+  transform: translateY(100%);
+
+  background-color: black;
+
+  bottom: 0;
+  width: 100%;
+  flex-direction: column-reverse;
+  position: absolute;
+  z-index: 100;
+  color: white !important;
+
+  @media (max-width: $lg) {
+    padding: 10px 15px 10px 15px;
+  }
+}
+
 .swiper-slide {
+  transition: transform 1s, filter 1s !important;
+  transform: scale(1) rotate(-2deg) translateY(0px) !important;
+  filter: saturate(0);
   overflow: hidden;
-  max-width: 80vw;
+  width: 50vw;
   position: relative;
   min-width: 1px;
-  width: auto;
-  height: 40vh;
-  opacity: 0.15;
-  position: relative;
-  transition: opacity 1s;
+  height: 65vh;
+  min-height: 500px;
+  opacity: 1;
+
+  &.swiper-slide-active,
+  &.swiper-slide-duplicate-active {
+    .Swiper-Content {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &.swiper-slide-next {
+    transform: rotate(-2deg) translateY(0px) !important;
+  }
 
   img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    transition: transform 1s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
-  .border {
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-    position: absolute;
+  &:active {
+    transition: transform 100ms;
+    transform: scale(0.9) !important;
   }
 
-  @media (max-width: $md) {
+  @media (max-width: $lg) {
+    width: 100vw !important;
   }
 }
 
 .swiper-slide-active,
 .swiper-slide-duplicate-active {
+  filter: blur(0px);
   opacity: 1;
+  filter: saturate(1);
+  transform: scale(1) !important;
+
+  img {
+    transition: all 1s;
+  }
 
   .border {
     box-sizing: border-box;
@@ -175,14 +209,6 @@
 .swiper-navigation {
 }
 
-.swiper-button-next {
-  right: 25px;
-}
-
-.swiper-button-prev {
-  left: 25px;
-}
-
 .swiper-button-next,
 .swiper-button-prev {
   width: 40px;
@@ -190,7 +216,7 @@
 
   border-radius: 50%;
   background: url("../../img/arrow.png") no-repeat;
-  opacity: 0.5;
+  opacity: 1;
   background-size: 100% 100%;
   color: rgb(109, 109, 109);
 
@@ -202,22 +228,158 @@
 
 .swiper-button-prev {
   transform: rotate(90deg);
+  left: 20px;
 }
 
 .swiper-button-next {
   transform: rotate(-90deg);
+  right: 20px;
 }
 
 .custom-pagination {
-  margin-top: 20px;
+  margin: auto 0;
+  margin-top: 50px;
   bottom: 0px !important;
   position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 
   .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
   }
   .swiper-pagination-bullet-active {
-    background-color: rgb(134, 134, 134);
+    background-color: rgb(0, 0, 0);
+  }
+}
+
+.Blog {
+  h1 {
+    text-decoration: underline;
+  }
+
+  .Blog-Entries {
+    margin-top: 5vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+
+    @media (max-width: $lg) {
+      grid-template-columns: 1fr;
+    }
+
+    li {
+      position: relative;
+      height: 500px;
+      overflow: hidden;
+
+      .Blog-Title {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        color: white;
+
+        pointer-events: none;
+
+        h2 {
+          padding-left: 5%;
+          padding-bottom: 5%;
+          z-index: 10;
+        }
+
+        .gradient {
+          z-index: 5;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+        }
+      }
+
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        transition: transform 1s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  margin-top: 5vh !important;
+  display: grid;
+}
+
+.Marquee {
+  h1 {
+    margin-right: 50px;
+  }
+  margin-top: 10vh;
+}
+
+.About {
+  margin-top: 10vh !important;
+
+  .About-Container {
+    display: flex;
+    gap: 150px;
+    position: relative;
+    margin-bottom: 10vh;
+
+    img {
+      z-index: 0;
+      object-fit: cover;
+      bottom: -20%;
+      right: 0;
+      height: 200%;
+      width: 65%;
+      opacity: 0.8;
+      position: absolute;
+      transform: rotate(0deg);
+      filter: saturate(0);
+    }
+
+    div {
+      z-index: 10;
+      p {
+        padding: 50px 20px 50px 0px;
+        z-index: 10;
+        background-color: white;
+        max-width: 700px;
+      }
+    }
+
+    @media (max-width: $lg) {
+      gap: 0;
+      flex-direction: column;
+
+      div > p {
+        padding-bottom: 0;
+      }
+
+      .Back-Button {
+        margin-bottom: 20px;
+      }
+
+      img {
+        width: 100%;
+        height: 400px;
+        position: relative;
+      }
+    }
+  }
+
+  h1 {
+    text-decoration: underline;
   }
 }

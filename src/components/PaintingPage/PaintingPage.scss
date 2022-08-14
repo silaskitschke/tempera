@@ -6,7 +6,7 @@
   text-align: left;
   width: 100%;
   max-width: 1300px;
-  padding: 0 20px;
+
   box-sizing: border-box;
   margin: 0 auto;
 }
@@ -17,6 +17,12 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  background-color: white;
+}
+
+.Painting-Page-Wrapper {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .Painting-Page-Separator {
@@ -32,11 +38,8 @@
   text-align: left;
 
   h1 {
-    font-size: 5vw;
-    background: -webkit-linear-gradient(rgb(127, 20, 133), rgb(82, 41, 170));
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    color: black;
+    text-decoration: underline;
+
     width: fit-content;
 
     @media (max-width: $xl) {
@@ -82,7 +85,7 @@
 
   .Painting-Page-Info {
     flex-direction: column;
-    display: flex;
+    display: none;
     gap: 40px;
     text-transform: uppercase;
     white-space: nowrap;
@@ -104,16 +107,14 @@
   }
 
   .Painting-Page-Image {
-    padding: 5em;
     box-sizing: border-box;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     position: relative;
 
     @media (max-width: $lg) {
-      padding: 3em;
     }
 
     .Painting-Page-Image-Background {
@@ -131,9 +132,10 @@
     }
 
     img {
-      max-height: 550px;
+      max-height: 100vh;
+
       width: 100%;
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 
@@ -142,6 +144,11 @@
     display: flex;
     flex-direction: row;
     flex-grow: 1;
+    margin-top: 0vh;
+
+    a {
+      margin-bottom: 20vh !important;
+    }
 
     p {
       white-space: pre-line;
@@ -162,8 +169,12 @@
   }
 
   p {
-    max-width: 700px;
+    max-width: 70%;
     text-align: left;
+
+    @media (max-width: $lg) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -180,3 +191,10 @@
   width: 100%;
   z-index: -10;
 } */
+
+.Painting-Description {
+  @media (max-width: $xl) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
